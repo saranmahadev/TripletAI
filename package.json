@@ -3,6 +3,7 @@
   "displayName": "TripletAI",
   "description": "TripletAI: Adaptable, Assistive, Autonomous Coding with AI",
   "version": "0.0.1",
+  "publisher": "saranmahadev",
   "engines": {
     "vscode": "^1.99.0"
   },
