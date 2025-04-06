@@ -1,23 +1,15 @@
+
 import * as vscode from 'vscode';
+import { insertInlineCommand } from './commands/insertInline';
+import { openChat } from './commands/openChat';
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log('TripletAI is now active!');
+  console.log('TripletAI extension is active.');
 
-  const disposable = vscode.commands.registerCommand('tripletai.askQuery', async () => {
-    const query = await vscode.window.showInputBox({
-      prompt: 'Ask TripletAI something...',
-      placeHolder: 'e.g., Explain the current line of code'
-    });
-
-    if (query) {
-      vscode.window.showInformationMessage(`You asked: "${query}"`);
-      console.log(`[TripletAI] User query: ${query}`);
-    } else {
-      vscode.window.showWarningMessage('No input provided.');
-    }
-  });
-
-  context.subscriptions.push(disposable);
+  context.subscriptions.push(
+    vscode.commands.registerCommand('tripletai.insertInlineTextbox', insertInlineCommand),
+    vscode.commands.registerCommand('tripletai.openChat', () => openChat(context)),
+  );
 }
 
 export function deactivate() {}

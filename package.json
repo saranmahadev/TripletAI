@@ -15,13 +15,22 @@
   "contributes": {
     "commands": [
       {
-        "command": "tripletai.askQuery",
-        "title": "TripletAI: Ask Query"
+        "command": "tripletai.insertInlineTextbox",
+        "title": "TripletAI: Insert Inline Textbox"
+      },
+      {
+        "command": "tripletai.openChat",
+        "title": "TripletAI: Open Chat"
       }
     ],
     "keybindings": [
       {
-        "command": "tripletai.askQuery",
+        "command": "tripletai.insertInlineTextbox",
+        "key": "ctrl+alt+q",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "tripletai.openChat",
         "key": "ctrl+shift+a",
         "when": "editorTextFocus"
       }
