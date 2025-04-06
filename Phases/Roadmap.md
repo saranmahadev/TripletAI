@@ -18,7 +18,7 @@ The development of **TripletAI** is divided into four key phases:
 - **Inline Code Completion**
   - Provides single-line code suggestions for JavaScript (JS), Python, and TypeScript (TS).
   - Triggered by pressing `.` or `Tab` for seamless integration into workflows.
-  - Powered by a local AI model (Ollama with Llama 3 7B) with an API fallback option for flexibility.
+  - Powered by different AI models (Selected by user) with an API fallback option for flexibility.
 - **Basic Chat Interface**
   - A Webview panel in VS Code for natural language queries (e.g., "Explain this code").
   - Automatically includes the active file or selected code as context for relevant responses.

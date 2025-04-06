@@ -15,8 +15,15 @@
   "contributes": {
     "commands": [
       {
-        "command": "tripletai.helloWorld",
-        "title": "Hello World"
+        "command": "tripletai.askQuery",
+        "title": "TripletAI: Ask Query"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "tripletai.askQuery",
+        "key": "ctrl+shift+a",
+        "when": "editorTextFocus"
       }
     ]
   },
